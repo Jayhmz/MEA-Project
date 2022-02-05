@@ -157,7 +157,7 @@ class EventController extends Controller
     // foreach ($event->posts() as $post ) {
     //   $post->delete();
     // }
-    $event->delete();
+    $event->forceDelete();
     return back()->with('success', $event->title . ' deleted successfully');
   }
 
